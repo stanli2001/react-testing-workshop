@@ -1,2 +1,3 @@
-# react-testing-workshop
-Starter Code for BNR React Testing Workshop
+# React Testing Workshop
+
+Starter Code for BNR React Testing Workshop coming soon!
