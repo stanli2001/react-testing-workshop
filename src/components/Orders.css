@@ -7,3 +7,11 @@ div.orders-component div.order {
   margin: 10px 5px;
   padding: 5px;
 }
+
+div.orders-component button {
+  background-color: #880000;
+  color: #fff;
+  padding: 5px;
+  border-radius: 10px;
+  border: 2px solid #440000;
+}

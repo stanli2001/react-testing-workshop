@@ -1,6 +1,11 @@
 import axios from 'axios';
 import PropTypes from 'prop-types';
-import { useMemo, useState, useRef } from 'react';
+import {
+  useEffect,
+  useMemo,
+  useState,
+  useRef,
+} from 'react';
 import Modal from 'react-modal';
 import { useNavigate } from 'react-router-dom';
 import { CartTypes } from '../reducers/cartReducer';
@@ -18,8 +23,6 @@ const customStyles = {
   },
 };
 
-Modal.setAppElement('#root');
-
 function Cart({ cart, dispatch, items }) {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
@@ -28,6 +31,10 @@ function Cart({ cart, dispatch, items }) {
   const [apiError, setApiError] = useState('');
   const zipRef = useRef();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    Modal.setAppElement('#root');
+  }, []);
 
   const subTotal = cart.reduce((acc, item) => {
     const details = items.find((i) => i.id === item.id);

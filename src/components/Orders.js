@@ -5,16 +5,31 @@ import PropTypes from 'prop-types';
 
 function Orders({ items }) {
   const [orders, setOrders] = useState([]);
-  const loadOrders = () => {
-    axios.get('/api/orders')
-      .then((result) => setOrders(result.data))
-      .catch(console.error);
-  };
-  useEffect(loadOrders, []);
+  useEffect(() => {
+    const ws = new WebSocket(`${(
+      window.location.protocol === 'https:' ? 'wss://' : 'ws://'
+    )}${window.location.host}/ws-coffee`);
+    ws.onopen = () => {
+      console.log('connected');
+    };
+    ws.onerror = (event) => {
+      console.error(event);
+    };
+    ws.onmessage = (message) => {
+      const newOrders = JSON.parse(message.data);
+      setOrders(newOrders);
+    };
+    ws.onclose = () => {
+      console.log('disconnected');
+    };
+
+    return () => {
+      ws.close();
+    };
+  }, []);
 
   const deleteOrder = (order) => {
     axios.delete(`api/orders/${order.id}`)
-      .then(loadOrders)
       .catch(console.error);
   };
 
