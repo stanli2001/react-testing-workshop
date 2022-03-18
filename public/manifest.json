@@ -1,0 +1,15 @@
+{
+  "short_name": "Coffee Shop",
+  "name": "Coffee Shop",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#080c14",
+  "background_color": "#282c34"
+}

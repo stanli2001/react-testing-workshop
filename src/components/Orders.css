@@ -1,0 +1,9 @@
+div.orders-component {
+  padding: 5px;
+}
+
+div.orders-component div.order {
+  border: 1px solid white;
+  margin: 10px 5px;
+  padding: 5px;
+}

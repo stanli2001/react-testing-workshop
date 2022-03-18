@@ -10,10 +10,15 @@ The `solution` branch contains the React application with tests.
 
 To run the Cypress tests, you will have to also be running the backend in another terminal tab (so you will need to download this repository twice).
 
-## Coffee Shop Backend
+## Coffee Shop
 
-This is the repo for the backend of the coffee shop app for the Big Nerd Ranch - React Testing Workshop.
+You can start the React app with `npm start`.
 
-Run with `npm start`.
+Note: You will also need to be running the server from the `main` branch for the application to open.
+You can either clone the repository twice or download the branches as zip files from GitHub.
 
-After starting, visit [http://localhost:3030](http://localhost:3030) and you will see `{"message":"Hi!"}`.
+## Starter Code
+
+This branch is the starter code (without any React tests).
+
+The `solution` branch has the solution code.
