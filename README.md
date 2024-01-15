@@ -1,7 +1,6 @@
 # React Testing Workshop
 
 You will find 3 branches in this repository.
-ok
 
 The [main](https://github.com/bignerdranch/react-testing-workshop) branch contains the backend.
 
